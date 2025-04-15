@@ -34,7 +34,7 @@ def make_restaurant_list(restaurant):
     if not found:
         rows.append({'Name': restaurant, 'Count': '1'})
 
-    create_restaurant_list(rows)
+    write_restaurant_list(rows)
 
 
 def read_restaurant_lists():
@@ -45,7 +45,7 @@ def read_restaurant_lists():
     except FileNotFoundError:
         return []
 
-def create_restaurant_list(rows):
+def write_restaurant_list(rows):
     fieldnames = ['Name', 'Count']
     with open('ranking.csv', 'w', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
