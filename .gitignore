@@ -8,3 +8,5 @@ __pycache__/
 src/lesson_250422/config.py
 
 src/.env
+
+src/data/db/
